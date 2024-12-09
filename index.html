@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'><link rel="stylesheet" href="./style.css">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,23 +18,25 @@
             </div>
         </div>
     </nav>
-
+    
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
+
                 <h1>I'm <span class="neon-text">Saif Abu Saad</span></h1>
-                <h2>Designer & Developer.</h2>
+                <h1 id="neon">Designer & Developer.</h1>
                 <p>Specializing in freelance interaction design and creative development based in Ontario, Canada. I work collaboratively with brands and agencies worldwide. Designing and developing websites and applications with a focus on interactive, minimal and visual experience.</p>
             </div>
-            <div class="profile-picture">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Profile Picture" />
+            <div class="profile-picture profile-picture1">
+                <canvas class="canvasOne" width="900" height="520" ></canvas>
+                <!-- <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Profile Picture" /> -->
             </div>
         </div>
     </section>
 
     <section id="skills" class="skills">
         <div class="skills-content">
-            <div class="skill-group">
+            <div class="skill-group"id="skill-group">
                 <h3>Design Skills</h3>
                 <ul>
                     <li>Figma</li>
@@ -41,8 +44,8 @@
                     <li>Adobe Photoshop</li>
                 </ul>
             </div>
-            <div class="skill-group">
-                <h3>Front-End</h3>
+            <div class="skill-group" id="skill-group">
+                <h3>Front End</h3>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -52,8 +55,8 @@
                     <li>GitHub</li>
                 </ul>
             </div>
-            <div class="skill-group">
-                <h3>Back-End</h3>
+            <div class="skill-group"id="skill-group">
+                <h3>Back End</h3>
                 <ul>
                     <li>SQL</li>
                     <li>Node.js</li>
@@ -71,26 +74,30 @@
             </div>
         </div>
     </section>
+    <div class="profile-picture profile-picture2">
+        <canvas class="canvasOne" width="900" height="520" ></canvas>
+    </div>
+    
 
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-gallery">
             <div class="project-card">
-               <a href="projects.html"> <div class="project-image" style="background-image: url('images/zima_grey.png')">
+               <a href="projects.html" id="tag"> <div class="project-image" style="background-image: url('images/zima_grey.png')">
                     <div class="project-overlay">
                         <h3>ZIMA</h3>
                     </div>
                 </div></a>
             </div>
             <div class="project-card">
-                <a href="projects.html">         <div class="project-image" style="background-image: url('images/hackton_grey.png')">
+                <a href="projects.html" id="tag">         <div class="project-image" style="background-image: url('images/hackton_grey.png')">
                     <div class="project-overlay">
                         <h3>HACKATON</h3>
                     </div>
                 </div></a>
             </div>
-            <div class="project-card">
-                <a href="projects.html">      <div class="project-image" style="background-image: url('images/alienis.png')">
+            <div class="project-card" >
+                <a href="projects.html" id="tag" >      <div class="project-image" style="background-image: url('images/alienis.png')">
                     <div class="project-overlay">
                         <h3>ALIENIS</h3>
                     </div>
@@ -108,9 +115,10 @@
         </div>
     </section>
     <section id="contact" class="contact">
+        
         <div class="contact-content">
             <div class="social-links">
-                <h3>Follow</h3>
+                <h3 id="Follow">Follow</h3>
                 <a href="#">Instagram</a>
                 <a href="#">YouTube</a>
                 <a href="#">LinkedIn</a>
@@ -118,15 +126,19 @@
                 <a href="#">GitHub</a>
             </div>
             <div class="contact-info">
-                <h3>Contact us</h3>
-                <a href="mailto:Saif@gmail.com">Saif@gmail.com</a>
+                <h3 id="contact-txt"> Contact us</h3>
+                <a href="mailto:Saif@gmail.com">Saifabusaad@gmail.com</a>
             </div>
             <div class="subscribe">
-                <h3>Subscribe</h3>
+                <h3 id="subscribe">Subscribe</h3>
                 <form id="subscribeForm">
                     <input type="email" placeholder="Email" required>
                     <button type="submit">Submit</button>
                 </form>
+                
+            </div>
+            <div class="project-logo">
+                <img src="images/Asset 8.svg" alt="Logo" />
             </div>
         </div>
     </section>
@@ -140,5 +152,13 @@
     </div>
 </body>
 
+
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'></script><script  src="./script.js"></script>
+<script src="js/scroll-animations.js"></script>
+<script src="js/3d.js"></script>
 <script src="js/main.js"></script>
+
 </html>
