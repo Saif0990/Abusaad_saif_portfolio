@@ -32,9 +32,11 @@
 }
 
 .project-logo {
+    transform: translateX(-4vw) translateY(-14vh);
+
     width: 80px;
     height: 80px;
-    margin-top: -158vh;
+    // margin-top: -158vh;
 }
 
 .project-logo img {
