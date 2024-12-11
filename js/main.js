@@ -14,29 +14,29 @@
         });
     
         // Subscribe form handling with popup
-        const subscribeForm = document.getElementById('subscribeForm');
-        const popup = document.getElementById('thankYouPopup');
-        const closePopup = document.querySelector('.close-popup');
+        // const subscribeForm = document.getElementById('subscribeForm');
+        // const popup = document.getElementById('thankYouPopup');
+        // const closePopup = document.querySelector('.close-popup');
     
-        if (subscribeForm) {
-            subscribeForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                popup.style.display = 'block';
-                this.reset();
-            });
-        }
+        // if (subscribeForm) {
+        //     subscribeForm.addEventListener('submit', function(e) {
+        //         e.preventDefault();
+        //         const email = this.querySelector('input[type="email"]').value;
+        //         popup.style.display = 'block';
+        //         this.reset();
+        //     });
+        // }
     
 
-        closePopup.addEventListener('click', () => {
-            popup.style.display = 'none';
-        });
+        // closePopup.addEventListener('click', () => {
+        //     popup.style.display = 'none';
+        // });
     
-        window.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
+        // window.addEventListener('click', (e) => {
+        //     if (e.target === popup) {
+        //         popup.style.display = 'none';
+        //     }
+        // });
     });
 
 
