@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <?php
+    
+    require_once('includes/connect.php');
+
+    $query = 'SELECT projects.id AS project, images, title FROM projects, media WHERE projects.id = media.project_id';
+
+    $results = mysqli_query($connect, $query);
+    ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,27 +90,19 @@
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-gallery">
+            <?php 
+            while($row = mysqli_fetch_array($results)) {
+
+            echo '
             <div class="project-card">
-               <a href="ZIMA.html" id="tag"> <div class="project-image"><img src="images/zima_grey.png" alt="Zima">
+               <a href="case-study.php?id='.$row['project'].'" id="tag"> <div class="project-image"><img src="images/'.$row['images'].'.png" alt="Zima">
                     <div class="project-overlay">
-                        <h3>ZIMA</h3>
+                        <h3>'.$row['title'].'</h3>
                     </div>
                 </div></a>
-            </div>
-            <div class="project-card">
-                <a href="Hackton.html" id="tag"><div class="project-image"><img src="images/hackton_grey.png" alt="Hackathon">
-                    <div class="project-overlay">
-                        <h3>HACKATON</h3>
-                    </div>
-                </div></a>
-            </div>
-            <div class="project-card" >
-                <a href="Alienis.html" id="tag" >      <div class="project-image"><img src="images/alienis.png" alt="Alienis">
-                    <div class="project-overlay">
-                        <h3>ALIENIS</h3>
-                    </div>
-                </div></a>
-            </div>
+            </div>';
+            }
+            ?>
         </div>
     </section>
 
