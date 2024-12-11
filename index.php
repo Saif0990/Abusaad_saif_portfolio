@@ -131,9 +131,9 @@
             </div>
             <div class="subscribe">
                 <h3 id="subscribe">Subscribe</h3>
-                <form id="subscribeForm">
-                    <input type="email" placeholder="Email" required>
-                    <button type="submit">Submit</button>
+                <form id="subscribeForm" method="post" action="sendmail.php">
+                    <input type="email" name="email" placeholder="Email">
+                    <button type="submit" value="send">Submit</button>
                 </form>
                 
             </div>
